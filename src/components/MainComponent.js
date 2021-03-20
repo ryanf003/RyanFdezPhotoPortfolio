@@ -18,7 +18,7 @@ class Main extends Component {
     render(){
         const HomePage = () => {
             return (
-                <Home />
+                <Home album={this.state.albums.filter(album => album.featured)} />
             );
         };
 
