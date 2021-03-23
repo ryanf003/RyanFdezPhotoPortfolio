@@ -6,7 +6,7 @@ export const ALBUMS = [
         count: 3,
         date: '',
         featured: true,
-        featuredimage: '/assets/images/DelfinFeatured.jpg'
+        featuredimage: '/assets/images/DelfinFeatured.jpg',
     },
     {
         id: 1,
@@ -14,7 +14,7 @@ export const ALBUMS = [
         image: '/assets/images/FelipeAlbum2.jpg',
         count: 3,
         date: '',
-        featured: false
+        featured: false,
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ export const ALBUMS = [
         image: '/assets/images/MarioAlbum.jpg',
         count: 3,
         date: '',
-        featured: false
+        featured: false,
     },
     {
         id: 3,
@@ -31,7 +31,7 @@ export const ALBUMS = [
         count: 4,
         date: '',
         featured: true,
-        featuredimage: '/assets/images/LondonFeatured.jpg'
+        featuredimage: '/assets/images/LondonFeatured.jpg',
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ export const ALBUMS = [
         image: '/assets/images/SevillaAlbum.jpg',
         count: 3,
         date: '',
-        featured: false
+        featured: false,
     },
     {
         id: 5,
@@ -47,7 +47,7 @@ export const ALBUMS = [
         image: '/assets/images/NYCAlbum.jpg',
         count: 3,
         date: '',
-        featured: false
+        featured: false,
     },
     {
         id: 6,
@@ -56,7 +56,7 @@ export const ALBUMS = [
         count: 4,
         date: '',
         featured: true,
-        featuredimage: '/assets/images/YosemiteAlbum.jpg'
+        featuredimage: '/assets/images/YosemiteAlbum.jpg',
     },
     {
         id: 7,
@@ -64,7 +64,7 @@ export const ALBUMS = [
         image: '/assets/images/PinnaclesAlbum.jpg',
         count: 4,
         date: '',
-        featured: false
+        featured: false,
     },
     {
         id: 8,
@@ -72,6 +72,6 @@ export const ALBUMS = [
         image: '/assets/images/MiscAlbum.jpg',
         count: 3,
         date: '',
-        featured: false
+        featured: false,
     }
 ];

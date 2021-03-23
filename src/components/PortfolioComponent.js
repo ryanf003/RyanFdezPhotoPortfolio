@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 function RenderPortfolioItem({album}){
     return(
         <Card> 
-            <Link to={`/portfolio/${album.name}`}>
+            <Link to={`/portfolio/${album.id}`}>
             <CardImg width="100%" src={album.image} alt={album.name} /></Link>
             <CardBody>
-                <Link to={`/portfolio/${album.name}`}><CardTitle>{album.name}</CardTitle></Link>
+                <Link to={`/portfolio/${album.id}`}><CardTitle>{album.name}</CardTitle></Link>
                 <CardText>
                     <i className="fa fa-image fa-lg" /> {album.count} &nbsp;&nbsp;&nbsp;&nbsp;
                     <i className="fa fa-calendar fa-lg" />
