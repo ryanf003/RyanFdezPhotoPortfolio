@@ -22,7 +22,7 @@ function Portfolio(props){
 
     const portfolio = props.albums.map(album => {
         return( 
-            <div key={album.id} className="col-md-3 m-4">
+            <div key={album.id} className="col-md-3 mx-4 my-3">
                 <RenderPortfolioItem album={album} />
             </div>
         );
@@ -30,7 +30,7 @@ function Portfolio(props){
 
     return(
         <div className="container">
-            <div className="row">
+            <div className="row row-center">
                 <div className="col">
                     <Breadcrumb>
                         <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>

@@ -44,16 +44,16 @@ class Contact extends Component {
                     <div className="col">
                         <Breadcrumb>
                             <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
-                            <BreadcrumbItem active>Contact Us</BreadcrumbItem>
+                            <BreadcrumbItem active>Contact</BreadcrumbItem>
                         </Breadcrumb>
-                        <h2>Contact Us</h2>
+                        <h2>Contact</h2>
                         <hr />
                     </div>
                 </div>
 
-                <div className="row row-content">
+                <div className="row row-content-noline">
                     <div className="col-md-4">
-                        <img className="d-block w-100" src="/assets/images/Contact.jpg" alt="Contact Page"></img>
+                        <img className="d-block w-100" src="/assets/images/ContactLg.jpg" alt="Contact Page"></img>
                     </div>
                     <div className="col-md-8">
                     <Form onSubmit={this.handleSubmit}>
@@ -94,31 +94,10 @@ class Contact extends Component {
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
-                                <Col md={{size: 4, offset: 2}}>
-                                    <FormGroup check>
-                                        <Label check>
-                                            <Input type="checkbox"
-                                                name="agree"
-                                                checked={this.state.agree}
-                                                onChange={this.handleInputChange} /> {' '}
-                                            <strong>May we contact you?</strong>
-                                        </Label>
-                                    </FormGroup>
-                                </Col>
-                                <Col md={4}>
-                                    <Input type="select" name="contactType"
-                                            defaultValue={this.state.contactType}
-                                            onChange={this.handleInputChange}>
-                                        <option>By Phone</option>
-                                        <option>By Email</option>
-                                    </Input>
-                                </Col>
-                            </FormGroup>
-                            <FormGroup row>
                                 <Label htmlFor="feedback" md={2}>Your Feedback</Label>
                                 <Col md={8}>
                                     <Input type="textarea" id="feedback" name="feedback"
-                                        rows="7"
+                                        rows="6"
                                         defaultValue={this.state.feedback}
                                         onChange={this.handleInputChange}></Input>
                                 </Col>
