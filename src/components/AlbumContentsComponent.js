@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem} from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 function RenderAlbumItem({contents}){
     return(
-        <Card> 
-            <CardImg width="100%" src={contents.image} alt={contents.name} />
-        </Card> 
+        <FadeTransform 
+            in
+            transformProps={{
+                exitTransform: 'scale(0.5) translateY(50%)'
+            }}>
+            <Card> 
+                <CardImg width="100%" src={contents.image} alt={contents.name} />
+            </Card> 
+        </FadeTransform>
     )
 }
 

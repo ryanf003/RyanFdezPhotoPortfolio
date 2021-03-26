@@ -1,20 +1,27 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 import { Link } from 'react-router-dom'
+import { FadeTransform } from 'react-animation-components';
 
 function RenderCard({album}){
     return(
-        <Card> 
-            <Link to={`/portfolio/${album.name}`}>
-            <CardImg width="100%" src={album.featuredimage} alt={album.name} /></Link>
-            <CardBody>
-                <Link to={`/portfolio/${album.name}`}><CardTitle>{album.name}</CardTitle></Link>
-                <CardText>
-                    <i className="fa fa-image fa-lg" /> {album.count} &nbsp;&nbsp;&nbsp;&nbsp;
-                    <i className="fa fa-calendar fa-lg" />
-                </CardText>
-            </CardBody>
-        </Card> 
+        <FadeTransform 
+            in
+            transformProps={{
+                exitTransform: 'scale(0.5) translateY(50%)'
+            }}>
+            <Card> 
+                <Link to={`/portfolio/${album.id}`}>
+                <CardImg width="100%" src={album.featuredimage} alt={album.name} /></Link>
+                <CardBody>
+                    <Link to={`/portfolio/${album.name}`}><CardTitle>{album.name}</CardTitle></Link>
+                    <CardText>
+                        <i className="fa fa-image fa-lg" /> {album.count} &nbsp;&nbsp;&nbsp;&nbsp;
+                        <i className="fa fa-calendar fa-lg" /> {album.date}
+                    </CardText>
+                </CardBody>
+            </Card> 
+        </FadeTransform>
     );
 }
 

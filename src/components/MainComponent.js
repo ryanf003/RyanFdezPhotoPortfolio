@@ -6,9 +6,11 @@ import Portfolio from './PortfolioComponent';
 import Contact from './ContactComponent';
 import AlbumContents from './AlbumContentsComponent';
 import About from './AboutComponent';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, BrowserRouter } from 'react-router-dom';
 import { ALBUMS } from '../shared/albums';
 import { CONTENTS } from '../shared/contents';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
  
 
 class Main extends Component {
@@ -21,6 +23,7 @@ class Main extends Component {
     }
     
     render(){
+
         const HomePage = () => {
             return (
                 <Home album={this.state.albums.filter(album => album.featured)} />
@@ -39,14 +42,20 @@ class Main extends Component {
         return(
             <div>
                 <Header/>
-                <Switch>
-                    <Route path='/home' component={HomePage} />
-                    <Route exact path='/portfolio' render={() => <Portfolio albums={this.state.albums} />} />
-                    <Route path='/portfolio/:albumId' component={AlbumPhotos} />
-                    <Route path='/about' component={About} />
-                    <Route exact path='/contactus' component={Contact} />
-                    <Redirect to='/home'/>
-                </Switch>
+                <Route render={({ location }) => (
+                    <TransitionGroup>
+                        <CSSTransition key={location.key} classNames="page" timeout={300}>
+                            <Switch>
+                                <Route path='/home' component={HomePage} />
+                                <Route exact path='/portfolio' render={() => <Portfolio albums={this.state.albums} />} />
+                                <Route path='/portfolio/:albumId' component={AlbumPhotos} />
+                                <Route path='/about' component={About} />
+                                <Route exact path='/contactus' component={Contact} />
+                                <Redirect to='/home'/>
+                            </Switch>
+                        </CSSTransition>
+                    </TransitionGroup>
+                )} />
                 <Footer/>
             </div>
         )
