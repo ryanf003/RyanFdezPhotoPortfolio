@@ -22,7 +22,7 @@ function Footer(props) {
                     </div>
                     <div className="col-sm-4 text-center">
                         <h5>Contact</h5>
-                        <a role="button" className="btn btn-link" href="tel:+12065551234"><i className="fa fa-phone" />  1-408-476-9035</a><br />
+                        <a role="button" className="btn btn-link" href="tel:+12065551234"><i className="fa fa-phone" />  408-476-9035</a><br />
                         <a role="button" className="btn btn-link" href="mailto:notreal@notreal.co"><i className="fa fa-envelope-o" /> ryanfdez3@gmail.com</a>
                     </div>
                 </div>
